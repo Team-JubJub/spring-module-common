@@ -1,8 +1,8 @@
 package com.zupzup.untact.domain.order;
 
-import domain.order.type.OrderSpecific;
-import domain.order.type.OrderStatus;
-import dto.order.OrderDto;
+import com.zupzup.untact.domain.order.type.OrderSpecific;
+import com.zupzup.untact.domain.order.type.OrderStatus;
+import com.zupzup.untact.dto.order.OrderDto;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;

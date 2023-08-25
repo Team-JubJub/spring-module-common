@@ -1,6 +1,6 @@
 package com.zupzup.untact.dto.order.seller.request;
 
-import domain.order.type.OrderSpecific;
+import com.zupzup.untact.domain.order.type.OrderSpecific;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

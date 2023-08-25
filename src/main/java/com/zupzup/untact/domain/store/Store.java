@@ -1,7 +1,7 @@
 package com.zupzup.untact.domain.store;
 
 
-import dto.store.seller.request.PatchDto;
+import com.zupzup.untact.dto.store.seller.request.PatchDto;
 import jakarta.persistence.*;
 import lombok.*;
 

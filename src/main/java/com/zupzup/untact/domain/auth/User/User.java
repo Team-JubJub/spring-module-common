@@ -1,9 +1,9 @@
 package com.zupzup.untact.domain.auth.User;
 
-import domain.auth.Role;
-import dto.info.customer.request.PatchNickNameDto;
-import dto.info.customer.request.PatchOptionalTermDto;
-import dto.info.customer.request.PatchPhoneNumberDto;
+import com.zupzup.untact.domain.auth.Role;
+import com.zupzup.untact.dto.info.customer.request.PatchNickNameDto;
+import com.zupzup.untact.dto.info.customer.request.PatchOptionalTermDto;
+import com.zupzup.untact.dto.info.customer.request.PatchPhoneNumberDto;
 import jakarta.persistence.*;
 import lombok.*;
 

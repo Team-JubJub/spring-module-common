@@ -1,6 +1,6 @@
 package com.zupzup.untact.dto.store;
 
-import domain.item.Item;
+import com.zupzup.untact.domain.item.Item;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

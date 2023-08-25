@@ -1,6 +1,6 @@
 package com.zupzup.untact.dto.auth.seller;
 
-import domain.auth.Role;
+import com.zupzup.untact.domain.auth.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

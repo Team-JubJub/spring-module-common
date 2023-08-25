@@ -1,7 +1,7 @@
 package com.zupzup.untact.repository;
 
 
-import domain.store.Store;
+import com.zupzup.untact.domain.store.Store;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

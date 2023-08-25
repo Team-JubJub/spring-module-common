@@ -1,6 +1,6 @@
 package com.zupzup.untact.repository;
 
-import domain.order.Order;
+import com.zupzup.untact.domain.order.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

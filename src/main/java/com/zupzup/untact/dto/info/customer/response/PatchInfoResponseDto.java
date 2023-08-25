@@ -1,6 +1,6 @@
 package com.zupzup.untact.dto.info.customer.response;
 
-import dto.auth.customer.UserDto;
+import com.zupzup.untact.dto.auth.customer.UserDto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,8 +1,8 @@
 package com.zupzup.untact.dto.auth.customer;
 
 
-import domain.auth.Role;
-import domain.auth.User.Provider;
+import com.zupzup.untact.domain.auth.Role;
+import com.zupzup.untact.domain.auth.User.Provider;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

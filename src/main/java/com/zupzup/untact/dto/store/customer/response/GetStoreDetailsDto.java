@@ -1,6 +1,6 @@
 package com.zupzup.untact.dto.store.customer.response;
 
-import dto.item.seller.response.ItemResponseDto;
+import com.zupzup.untact.dto.item.seller.response.ItemResponseDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

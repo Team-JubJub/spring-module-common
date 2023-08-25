@@ -1,7 +1,7 @@
 package com.zupzup.untact.dto.order;
 
-import domain.order.type.OrderSpecific;
-import domain.order.type.OrderStatus;
+import com.zupzup.untact.domain.order.type.OrderSpecific;
+import com.zupzup.untact.domain.order.type.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
