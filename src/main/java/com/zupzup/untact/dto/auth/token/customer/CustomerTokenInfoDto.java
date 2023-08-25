@@ -1,10 +1,12 @@
 package com.zupzup.untact.dto.auth.token.customer;
 
+import dto.auth.customer.UserDto;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 
 @Schema(description = "Response body에 실을 토큰(액세스, 리프레시) 정보를 담은 DTO")
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @ToString
@@ -19,11 +21,7 @@ public class CustomerTokenInfoDto {
     @Schema(description = "리프레시 토큰")
     private String refreshToken;
 
-    public CustomerTokenInfoDto(String result, String message, String accessToken, String refreshToken) {
-        this.result = result;
-        this.message = message;
-        this.accessToken = accessToken;
-        this.refreshToken = refreshToken;
-    }
+    @Schema(description = "유저의 정보", implementation = UserDto.class)
+    private UserDto userDto;
 
 }

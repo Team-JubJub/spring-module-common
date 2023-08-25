@@ -7,13 +7,11 @@ import lombok.Setter;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter @Setter
-public class UpdateRequestDto {
+@Getter
+@Setter
+public class PatchItemCountDto {
 
-    private String itemName;
-    private String imageURL;
-    private int itemPrice;
-    private int salePrice;
+    private Long itemId;
     private int itemCount;
 
 }

@@ -2,7 +2,6 @@ package com.zupzup.untact.domain.order;
 
 import domain.order.type.OrderSpecific;
 import domain.order.type.OrderStatus;
-import domain.store.Store;
 import dto.order.OrderDto;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;

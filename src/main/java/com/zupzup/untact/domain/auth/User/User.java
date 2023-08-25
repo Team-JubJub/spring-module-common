@@ -1,6 +1,9 @@
 package com.zupzup.untact.domain.auth.User;
 
 import domain.auth.Role;
+import dto.info.customer.request.PatchNickNameDto;
+import dto.info.customer.request.PatchOptionalTermDto;
+import dto.info.customer.request.PatchPhoneNumberDto;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -39,6 +42,18 @@ public class User {
             throw new IllegalArgumentException("필수 파라미터(providerUserId) 누락");
         }
         return UserBuilder().providerUserId(providerUserId);
+    }
+
+    public void updatePhoneNumber(PatchPhoneNumberDto patchPhoneNumberDto) {
+        this.phoneNumber = patchPhoneNumberDto.getPhoneNumber();
+    }
+
+    public void updateNickName(PatchNickNameDto patchNickNameDto) {
+        this.nickName = patchNickNameDto.getNickName();
+    }
+
+    public void updateOptionalTerm1(PatchOptionalTermDto patchOptionalTermDto) {
+        this.optionalTerm1 = patchOptionalTermDto.getOptionalTerm1();
     }
 
 }

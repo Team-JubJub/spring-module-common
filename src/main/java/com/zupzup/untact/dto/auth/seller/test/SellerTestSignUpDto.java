@@ -1,20 +1,15 @@
-package com.zupzup.untact.dto.auth.seller;
+package com.zupzup.untact.dto.auth.seller.test;
 
-import domain.auth.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Setter
 @Getter
-public class SellerDto {
+public class SellerTestSignUpDto {
 
-    private Long sellerId;
     private String loginId;
     private String loginPwd;
 
-    private Role role;
 }
