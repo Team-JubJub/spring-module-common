@@ -49,6 +49,7 @@ public class Store {
     private Boolean isOpen; // 가게 운영 여부
     @Column(nullable = false)
     private String closedDay; // 휴무일 (0-휴무, 1-영업)
+    private String crNumber; // 사업자 등록 번호
 
     public static StoreBuilder builder(String storeName) {   // 필수 파라미터 고려해볼 것
         if(storeName == null) {
