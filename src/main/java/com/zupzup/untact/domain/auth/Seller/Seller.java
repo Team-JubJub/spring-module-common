@@ -1,6 +1,6 @@
 package com.zupzup.untact.domain.auth.Seller;
 
-import com.zupzup.untact.domain.auth.Role;
+import domain.auth.Role;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,6 +19,13 @@ public class Seller {
     private String loginId;
     @Column(nullable = false)
     private String loginPwd;
+
+    @Column(nullable = false)
+    private String name;
+    @Column(nullable = false)
+    private String phoneNumber;
+    @Column(nullable = false)
+    private String email;
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)

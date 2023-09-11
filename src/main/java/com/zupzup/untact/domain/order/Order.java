@@ -1,8 +1,8 @@
 package com.zupzup.untact.domain.order;
 
-import com.zupzup.untact.domain.order.type.OrderSpecific;
-import com.zupzup.untact.domain.order.type.OrderStatus;
-import com.zupzup.untact.dto.order.OrderDto;
+import domain.order.type.OrderSpecific;
+import domain.order.type.OrderStatus;
+import dto.order.OrderDto;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
@@ -41,6 +41,9 @@ public class Order {
     @CollectionTable(name = "orderSpecific", joinColumns = @JoinColumn(name="orderId", referencedColumnName="orderId"))
     @Cascade(org.hibernate.annotations.CascadeType.ALL) @Valid
     private List<OrderSpecific> orderList;  // 주문 품목(이름, 가격, 개수, (img))
+
+    @Column(nullable = false) private Integer totalPrice;   // 주문의 총 금액(할인 가격의 합)
+    @Column(nullable = false) private Integer savedMoney;   // 아낀 금액(판매 가격의 합 - 할인 가격의 합)
 
     public static OrderBuilder builder(Long storeId) {   // 필수 파라미터 고려해볼 것
         if(storeId == null) {

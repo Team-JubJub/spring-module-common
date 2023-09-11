@@ -1,4 +1,4 @@
-package com.zupzup.untact.dto.item.seller.response;
+package com.zupzup.untact.dto.item.customer.response;
 
 import com.zupzup.untact.domain.item.Item;
 import lombok.AllArgsConstructor;
@@ -17,7 +17,6 @@ public class ItemResponseDto {
     private int itemPrice;
     private int salePrice;
     private int itemCount;
-    //private Long storeId;
 
     public ItemResponseDto toItemResponseDto(Item item) {
 
@@ -27,7 +26,6 @@ public class ItemResponseDto {
         this.itemPrice = item.getItemPrice();
         this.salePrice = item.getSalePrice();
         this.itemCount = item.getItemCount();
-        //this.storeId = item.getStore().getStoreId();
 
         return this;
     }
