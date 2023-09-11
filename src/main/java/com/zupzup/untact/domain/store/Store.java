@@ -1,7 +1,7 @@
 package com.zupzup.untact.domain.store;
 
 
-import dto.store.seller.request.ModifyStoreDto;
+import com.zupzup.untact.dto.store.seller.request.ModifyStoreDto;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Cascade;
