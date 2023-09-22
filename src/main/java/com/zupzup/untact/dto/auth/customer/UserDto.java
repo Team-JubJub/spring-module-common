@@ -24,12 +24,15 @@ public class UserDto {
     private String gender;
     private String phoneNumber;
 
-    private List<Integer> starredStores;
+    private List<Long> starredStores;
+    private List<Long> alertStores;
 
     private Boolean essentialTerms;
     private Boolean optionalTerm1;
     private String registerTime;
     private int orderCount;
+
+    private String deviceToken;
 
     private Role role;
 
