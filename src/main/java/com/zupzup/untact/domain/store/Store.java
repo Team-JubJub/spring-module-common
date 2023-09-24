@@ -1,5 +1,8 @@
 package com.zupzup.untact.domain.store;
 
+import com.zupzup.untact.domain.enums.EnterState;
+import com.zupzup.untact.domain.enums.StoreCategory;
+import com.zupzup.untact.dto.store.StoreDto;
 import com.zupzup.untact.dto.store.seller.request.ModifyStoreDto;
 import jakarta.persistence.*;
 import lombok.*;
@@ -13,8 +16,7 @@ import java.util.Set;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder(builderMethodName = "StoreBuilder")
-@Getter
-@Setter
+@Getter @Setter
 public class Store {
 
     @Id
@@ -32,8 +34,8 @@ public class Store {
     private String storeImageUrl; // 가게 대표 이미지 url - 이미지 없을 시 기본이미지
     @Column(nullable = false, length = 1000)
     private String storeAddress; // 가게 주소
-    @Column(nullable = true)
-    private String category; // 카테고리
+    @Enumerated(EnumType.STRING) @Column(nullable = true)
+    private StoreCategory category; // 카테고리
     @Column(nullable = false)
     private String sellerName; // 대표자 이름
     @Column(nullable = false)
@@ -83,6 +85,9 @@ public class Store {
     @Column(nullable = false)
     private String crNumber;    // 사업자 등록번호
 
+    @Enumerated(EnumType.STRING) @Column(nullable = true)
+    private EnterState enterState;  // 등록 상태(NEW, WAIT, CONFIRM)
+
     public static StoreBuilder builder(String storeName) {   // 필수 파라미터 고려해볼 것
         if(storeName == null) {
             throw new IllegalArgumentException("필수 파라미터(store name) 누락");
@@ -103,6 +108,15 @@ public class Store {
         this.saleTimeStart = modifyStoreDto.getSaleTimeStart();
         this.saleTimeEnd = modifyStoreDto.getSaleTimeEnd();
         this.closedDay = modifyStoreDto.getClosedDay();
+    }
+
+    public void updateStarredUserList(StoreDto storeDto) {
+        this.starredUsers = storeDto.getStarredUsers();
+        this.alertUsers = storeDto.getAlertUsers();
+    }
+
+    public void updateAlertUserList(StoreDto storeDto) {
+        this.alertUsers = storeDto.getAlertUsers();
     }
 
 }
