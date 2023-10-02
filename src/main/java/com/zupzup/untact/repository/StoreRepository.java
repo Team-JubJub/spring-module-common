@@ -1,6 +1,7 @@
 package com.zupzup.untact.repository;
 
 
+import com.zupzup.untact.domain.enums.EnterState;
 import com.zupzup.untact.domain.store.Store;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -13,5 +14,6 @@ public interface StoreRepository extends JpaRepository<Store, Long> {
     Store findBySellerId(Long sellerId);    // 가게 주인 id를 통한 조회
     List<Store> findByCategory(String category);    // 카테고리별 조회
     List<Store> findByStoreNameContaining(String keyword);  // 가게 이름으로 검색
+    List<Store> findByEnterState(EnterState enterState); // 등록 상태로 조회
 
 }
