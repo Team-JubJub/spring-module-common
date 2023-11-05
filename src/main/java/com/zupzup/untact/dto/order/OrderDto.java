@@ -19,7 +19,7 @@ public class OrderDto {
     private Long orderId;    // Order ID
     private Long storeId;
     private Long userId;
-    
+
     private OrderStatus orderStatus; // 주문 상태
     private String userName; // 닉네임
     private String phoneNumber; // 전화번호 -> 필요 없으면 삭제할 것
@@ -28,6 +28,7 @@ public class OrderDto {
     private String visitTime; // 방문예정 시간
     private String storeName;
     private String storeAddress;
+    private String storeContact;
     private StoreCategory category;
 
     private List<OrderSpecific> orderList; // 주문 품목 이름, 가격, 개수

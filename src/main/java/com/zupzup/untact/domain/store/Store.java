@@ -8,8 +8,6 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Cascade;
 
-import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -70,12 +68,12 @@ public class Store {
     @ElementCollection
     @CollectionTable(name = "starredUsers", joinColumns = @JoinColumn(name="storeId", referencedColumnName="storeId"))
     @Cascade(org.hibernate.annotations.CascadeType.ALL)
-    private List<Long> starredUsers;    // 찜한 유저 아이디들 -> 사용자 앱에서 찜 설정 시 조작됨
+    private Set<Long> starredUsers;    // 찜한 유저 아이디들 -> 사용자 앱에서 찜 설정 시 조작됨
     @Column(nullable = true)
     @ElementCollection
     @CollectionTable(name = "alertUsers", joinColumns = @JoinColumn(name="storeId", referencedColumnName="storeId"))
     @Cascade(org.hibernate.annotations.CascadeType.ALL)
-    private List<Long> alertUsers;    // 알림 설정한 유저 아이디들 -> 사용자 앱에서 알림 설정 시 조작됨
+    private Set<Long> alertUsers;    // 알림 설정한 유저 아이디들 -> 사용자 앱에서 알림 설정 시 조작됨
 
     @Column(nullable = true)
     @ElementCollection
@@ -89,8 +87,8 @@ public class Store {
     @Enumerated(EnumType.STRING) @Column(nullable = true)
     private EnterState enterState;  // 등록 상태(NEW, WAIT, CONFIRM)
 
-    private String waitStatusTimestamp; // NEW -> WAIT (CONFIRM -> WAIT) 으로 변경된 시간
-    private String confirmStatusTimestamp; // WAIT -> CONFIRM 으로 변경된 시간
+    private String waitStatusTimestamp;  // NEW -> WAIT (CONFIRM -> WAIT) 으로 변경된 시간
+    private String confirmStatusTimestamp;   // WAIT -> CONFIRM 으로 변경된 시간
 
     public static StoreBuilder builder(String storeName) {   // 필수 파라미터 고려해볼 것
         if(storeName == null) {
@@ -122,5 +120,7 @@ public class Store {
     public void updateAlertUserList(StoreDto storeDto) {
         this.alertUsers = storeDto.getAlertUsers();
     }
+
+    public void updateDeviceTokens(StoreDto storeDto) { this.deviceTokens = storeDto.getDeviceTokens(); }
 
 }

@@ -1,6 +1,7 @@
 package com.zupzup.untact.domain.auth.User;
 
 import com.zupzup.untact.domain.auth.Role;
+import com.zupzup.untact.dto.auth.customer.UserDto;
 import com.zupzup.untact.dto.info.customer.request.PatchNickNameDto;
 import com.zupzup.untact.dto.info.customer.request.PatchOptionalTermDto;
 import com.zupzup.untact.dto.info.customer.request.PatchPhoneNumberDto;
@@ -8,7 +9,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Cascade;
 
-import java.util.List;
+import java.util.Set;
 
 @Entity @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -32,17 +33,17 @@ public class User {
     @ElementCollection
     @CollectionTable(name = "starredStores", joinColumns = @JoinColumn(name="userId", referencedColumnName="userId"))
     @Cascade(org.hibernate.annotations.CascadeType.ALL)
-    private List<Long> starredStores;    // 찜한 가게 아이디들
+    private Set<Long> starredStores;    // 찜한 가게 아이디들
     @Column(nullable = true)
     @ElementCollection
     @CollectionTable(name = "alertStores", joinColumns = @JoinColumn(name="userId", referencedColumnName="userId"))
     @Cascade(org.hibernate.annotations.CascadeType.ALL)
-    private List<Long> alertStores;    // 알림 설정한 가게 아이디들
+    private Set<Long> alertStores;    // 알림 설정한 가게 아이디들
 
     @Column(nullable = false) private Boolean essentialTerms;   // 필수 약관 동의 여부
     @Column(nullable = false) private Boolean optionalTerm1;    // 선택 약관1 동의 여부
     @Column(nullable = false) private String registerTime;  // 가입 시간(LocalDateTime, 현재는 KST 기준)
-    @Column(nullable = false) private int orderCount;   // 주문 횟수(바로바로 횟수 계산이 가능하게끔 primitive type으로)
+    @Column(nullable = false) private int orderCount;   // 주문 횟수(바로바로 수 계산이 가능하게끔 primitive type으로)
 
     @Column(nullable = true) private String deviceToken; //  푸시 알림을 위한 디바이스 토큰
 
@@ -67,6 +68,19 @@ public class User {
 
     public void updateOptionalTerm1(PatchOptionalTermDto patchOptionalTermDto) {
         this.optionalTerm1 = patchOptionalTermDto.getOptionalTerm1();
+    }
+
+    public void updateStarredStoreList(UserDto userDto) {
+        this.starredStores = userDto.getStarredStores();
+        this.alertStores = userDto.getAlertStores();
+    }
+
+    public void updateDeviceToken(UserDto userDto) {
+        this.deviceToken = userDto.getDeviceToken();
+    }
+
+    public void updateAlertStoreList(UserDto userDto) {
+        this.alertStores  = userDto.getAlertStores();
     }
 
 }
