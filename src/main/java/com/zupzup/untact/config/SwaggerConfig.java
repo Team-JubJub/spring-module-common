@@ -16,7 +16,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
         return new OpenAPI()
                 .info(new Info().title("Zupzup API")
-                        .description("Zupzup 구매자 api 명세서 입니다.")
+//                        .description("Zupzup 구매자 api 명세서 입니다.")
                         .version("v0.0.1"));
     }
 }
