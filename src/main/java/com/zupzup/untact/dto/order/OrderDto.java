@@ -1,5 +1,6 @@
 package com.zupzup.untact.dto.order;
 
+import com.zupzup.untact.domain.enums.StoreCategory;
 import com.zupzup.untact.domain.order.type.OrderSpecific;
 import com.zupzup.untact.domain.order.type.OrderStatus;
 import lombok.AllArgsConstructor;
@@ -27,7 +28,7 @@ public class OrderDto {
     private String visitTime; // 방문예정 시간
     private String storeName;
     private String storeAddress;
-    private String category;
+    private StoreCategory category;
 
     private List<OrderSpecific> orderList; // 주문 품목 이름, 가격, 개수
     private Integer totalPrice;
