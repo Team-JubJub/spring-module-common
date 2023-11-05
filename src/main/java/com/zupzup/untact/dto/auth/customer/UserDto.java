@@ -2,7 +2,7 @@ package com.zupzup.untact.dto.auth.customer;
 
 
 import com.zupzup.untact.domain.auth.Role;
-import com.zupzup.untact.domain.auth.User.Provider;
+import com.zupzup.untact.domain.auth.user.Provider;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

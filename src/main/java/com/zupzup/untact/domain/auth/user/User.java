@@ -1,4 +1,4 @@
-package com.zupzup.untact.domain.auth.User;
+package com.zupzup.untact.domain.auth.user;
 
 import com.zupzup.untact.domain.auth.Role;
 import com.zupzup.untact.dto.auth.customer.UserDto;

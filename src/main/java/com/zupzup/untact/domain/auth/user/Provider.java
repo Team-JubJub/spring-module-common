@@ -1,4 +1,4 @@
-package com.zupzup.untact.domain.auth.User;
+package com.zupzup.untact.domain.auth.user;
 
 public enum Provider {
 

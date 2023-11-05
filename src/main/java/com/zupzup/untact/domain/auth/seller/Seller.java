@@ -1,4 +1,4 @@
-package com.zupzup.untact.domain.auth.Seller;
+package com.zupzup.untact.domain.auth.seller;
 
 import com.zupzup.untact.domain.auth.Role;
 import jakarta.persistence.*;
