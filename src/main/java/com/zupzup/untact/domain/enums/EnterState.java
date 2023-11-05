@@ -1,12 +1,11 @@
 package com.zupzup.untact.domain.enums;
 
-import com.zupzup.untact.model.BaseEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public enum EnterState implements BaseEnum {
+public enum EnterState /*implements BaseEnum*/ {
 
     NEW("신규 신청", "새로 신청이 들어옴"),
     WAIT("노출 대기", "어플에서 수정 가능"),
@@ -15,12 +14,12 @@ public enum EnterState implements BaseEnum {
     private final String name;
     private final String desc;
 
-    @Override
+//    @Override
     public String getName() {
         return this.name;
     }
 
-    @Override
+//    @Override
     public String getDesc() {
         return this.desc;
     }
