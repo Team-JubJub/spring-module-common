@@ -54,6 +54,10 @@ public class Order {
         return OrderBuilder().storeId(storeId);
     }
 
+    public void updateOrder(OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+
     public void updateOrder(OrderDto orderDto) {
         this.orderStatus = orderDto.getOrderStatus();
         this.orderList = orderDto.getOrderList();
