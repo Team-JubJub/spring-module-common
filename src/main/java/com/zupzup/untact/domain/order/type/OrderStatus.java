@@ -7,7 +7,7 @@ public enum OrderStatus {
     CANCEL("주문 취소"),
     COMPLETE("주문 완료"),
     NEW("신규 주문"),
-    WITHDREW("탈퇴한 회원 주문");  // withdraw 의 과거형
+    WITHDREW("탈퇴한 회원 주문");  // withdraw의 과거형
 
     private final String status;
 
