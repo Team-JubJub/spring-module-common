@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface FirstOrderRepository extends JpaRepository<FirstOrderData, Long> {
+public interface FirstOrderDataRepository extends JpaRepository<FirstOrderData, Long> {
 }
