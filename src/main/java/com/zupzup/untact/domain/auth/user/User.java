@@ -58,6 +58,10 @@ public class User {
         return UserBuilder().providerUserId(providerUserId);
     }
 
+    public void updateOrderCount() {
+        this.orderCount += 1;
+    }
+
     public void updatePhoneNumber(PatchPhoneNumberDto patchPhoneNumberDto) {
         this.phoneNumber = patchPhoneNumberDto.getPhoneNumber();
     }
