@@ -2,6 +2,7 @@ package com.zupzup.untact.domain.enums;
 
 public enum StoreCategory {
 
+    NONE("미정"),
     BAKERY("BAKERY"),
     CAFE("CAFE"),
     SALAD("SALAD"),

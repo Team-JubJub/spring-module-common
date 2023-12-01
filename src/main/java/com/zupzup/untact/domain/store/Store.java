@@ -62,7 +62,7 @@ public class Store {
     @Column(nullable = false)
     private Boolean isOpen; // 가게 운영 여부
     @Column(nullable = false)
-    private String closedDay; // 휴무일 (0-휴무, 1-영업)
+    private String closedDay; // 휴무일
 
     @Column(nullable = true)
     @ElementCollection
