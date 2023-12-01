@@ -29,7 +29,7 @@ public class Store {
 
     @Column(nullable = false)
     private String storeName; // 가게이름
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String storeImageUrl; // 가게 대표 이미지 url - 이미지 없을 시 기본이미지
     @Column(nullable = false, length = 1000)
     private String storeAddress; // 가게 주소
@@ -39,29 +39,29 @@ public class Store {
     private String sellerName; // 대표자 이름
     @Column(nullable = false)
     private String sellerContact; // 대표자 연락처
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String storeContact; // 가게 연락처
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private Double longitude;   // 경도
-    @Column(nullable = true)
+    @Column(nullable = false)
     private Double latitude;    // 위도
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String openTime; // 운영 시작 시간
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String closeTime; // 운영 마감 시간
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String saleTimeStart;   // 할인 시작 시간
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String saleTimeEnd; // 할인 마감 시간
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String saleMatters; // 공지사항
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String promotion; // 공지와 별개의 프로모션
 
-    @Column
+    @Column(nullable = false)
     private Boolean isOpen; // 가게 운영 여부
-    @Column(nullable = true)
+    @Column(nullable = false)
     private String closedDay; // 휴무일 (0-휴무, 1-영업)
 
     @Column(nullable = true)
@@ -84,7 +84,7 @@ public class Store {
     @Column(nullable = false)
     private String crNumber;    // 사업자 등록번호
 
-    @Enumerated(EnumType.STRING) @Column(nullable = true)
+    @Enumerated(EnumType.STRING) @Column(nullable = false)
     private EnterState enterState;  // 등록 상태(NEW, WAIT, CONFIRM)
 
     private String waitStatusTimestamp;  // NEW -> WAIT (CONFIRM -> WAIT) 으로 변경된 시간
