@@ -33,7 +33,7 @@ public class Store {
     private String storeImageUrl; // 가게 대표 이미지 url - 이미지 없을 시 기본이미지
     @Column(nullable = false, length = 1000)
     private String storeAddress; // 가게 주소
-    @Enumerated(EnumType.STRING) @Column(nullable = true)
+    @Enumerated(EnumType.STRING) @Column(nullable = false)
     private StoreCategory category; // 카테고리
     @Column(nullable = false)
     private String sellerName; // 대표자 이름
