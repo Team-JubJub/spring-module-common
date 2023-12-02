@@ -1,6 +1,5 @@
 package com.zupzup.untact.domain.store;
 
-import com.zupzup.untact.domain.auth.seller.Seller;
 import com.zupzup.untact.domain.enums.EnterState;
 import com.zupzup.untact.domain.enums.StoreCategory;
 import com.zupzup.untact.dto.store.StoreDto;
@@ -25,8 +24,8 @@ public class Store {
     @Getter
     private Long storeId;
 
-    @ManyToOne(optional = false) @JoinColumn(name = "sellerId")
-    private Seller seller;
+    @JoinColumn(name = "seller")
+    private Long sellerId;
 
     @Column(nullable = false)
     private String storeName; // 가게이름
