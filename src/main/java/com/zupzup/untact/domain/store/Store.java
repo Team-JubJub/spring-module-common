@@ -24,7 +24,7 @@ public class Store {
     @Getter
     private Long storeId;
 
-    @JoinColumn(name = "seller")
+    @ManyToOne(optional = false) @JoinColumn(name = "seller")
     private Long sellerId;
 
     @Column(nullable = false)
