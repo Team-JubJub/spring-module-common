@@ -76,7 +76,7 @@ public class Store {
     @ElementCollection
     @CollectionTable(name = "deviceTokens", joinColumns = @JoinColumn(name="storeId", referencedColumnName="storeId"))
     @Cascade(org.hibernate.annotations.CascadeType.ALL)
-    private Set<String> deviceTokens;    // 알림 설정한 유저 아이디들
+    private Set<String> deviceTokens;    // 푸시 알림을 받을 사장님들의 FCM 디바이스 토큰, 아이디 비번 로그인 시 저장
 
     @Column(nullable = false)
     private String crNumber;    // 사업자 등록번호
