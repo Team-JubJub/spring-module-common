@@ -29,12 +29,11 @@ public class User {
     @Column(nullable = false) private String gender;    // 성별
     @Column(nullable = false) private String phoneNumber;   // 유저의 연락처
 
-    @Column(nullable = true)
+
     @ElementCollection
     @CollectionTable(name = "starredStores", joinColumns = @JoinColumn(name="userId", referencedColumnName="userId"))
     @Cascade(org.hibernate.annotations.CascadeType.ALL)
     private Set<Long> starredStores;    // 찜한 가게 아이디들
-    @Column(nullable = true)
     @ElementCollection
     @CollectionTable(name = "alertStores", joinColumns = @JoinColumn(name="userId", referencedColumnName="userId"))
     @Cascade(org.hibernate.annotations.CascadeType.ALL)
@@ -45,7 +44,7 @@ public class User {
     @Column(nullable = false) private String registerTime;  // 가입 시간(LocalDateTime, 현재는 KST 기준)
     @Column(nullable = false) private int orderCount;   // 주문 횟수(바로바로 수 계산이 가능하게끔 primitive type으로)
 
-    @Column(nullable = true) private String deviceToken; //  푸시 알림을 위한 디바이스 토큰
+    private String deviceToken; //  푸시 알림을 위한 디바이스 토큰
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
