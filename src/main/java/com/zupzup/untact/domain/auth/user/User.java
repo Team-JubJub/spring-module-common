@@ -22,7 +22,8 @@ public class User {
     @Column(name = "userId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;    // auto increment id
-    @Enumerated(EnumType.STRING) private Provider provider;  // 가입 시 사용한 플랫폼
+    @Enumerated(EnumType.STRING) @Column(nullable = false)
+    private Provider provider;  // 가입 시 사용한 플랫폼
     @Column(nullable = false) private String providerUserId;  // ex) KAKAO_user123
     @Column(nullable = false) private String userName;    // 유저의 실명
     @Column(nullable = false) private String nickName;  // 닉네임
