@@ -31,6 +31,9 @@ public class Seller {
     @Enumerated(EnumType.STRING)
     private Role role;  // 사장님의 앱 권한 -> 우선 ROLE_SELLER로 통일
 
+    @Column(nullable = false)
+    private Boolean wantDeletion; // 삭제 요청 여부
+
     public SellerBuilder builder(String loginId) {
         if (loginId.equals(null)) {
             throw new IllegalArgumentException("필수 파라미터(loginId) 누락");
