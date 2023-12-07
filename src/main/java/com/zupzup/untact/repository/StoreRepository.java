@@ -4,9 +4,7 @@ package com.zupzup.untact.repository;
 import com.zupzup.untact.domain.enums.EnterState;
 import com.zupzup.untact.domain.enums.StoreCategory;
 import com.zupzup.untact.domain.store.Store;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
