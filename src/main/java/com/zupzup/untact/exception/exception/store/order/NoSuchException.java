@@ -1,4 +1,4 @@
-package com.zupzup.untact.exception.exception;
+package com.zupzup.untact.exception.exception.store.order;
 
 import org.springframework.http.HttpStatus;
 
