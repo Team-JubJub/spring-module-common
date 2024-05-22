@@ -1,11 +1,12 @@
 package com.zupzup.untact.model.domain.auth.user;
 
 import com.zupzup.untact.model.BaseEntity;
-import com.zupzup.untact.model.domain.auth.Role;
-import com.zupzup.untact.model.dto.auth.customer.UserDto;
-import com.zupzup.untact.model.dto.info.customer.request.PatchNickNameDto;
-import com.zupzup.untact.model.dto.info.customer.request.PatchOptionalTermDto;
-import com.zupzup.untact.model.dto.info.customer.request.PatchPhoneNumberDto;
+import com.zupzup.untact.model.enums.auth.Provider;
+import com.zupzup.untact.model.enums.auth.Role;
+import com.zupzup.untact.dto.auth.customer.UserDto;
+import com.zupzup.untact.dto.info.customer.request.PatchNickNameDto;
+import com.zupzup.untact.dto.info.customer.request.PatchOptionalTermDto;
+import com.zupzup.untact.dto.info.customer.request.PatchPhoneNumberDto;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;

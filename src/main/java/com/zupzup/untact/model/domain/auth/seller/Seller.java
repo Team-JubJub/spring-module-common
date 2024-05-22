@@ -1,7 +1,7 @@
 package com.zupzup.untact.model.domain.auth.seller;
 
 import com.zupzup.untact.model.BaseEntity;
-import com.zupzup.untact.model.domain.auth.Role;
+import com.zupzup.untact.model.enums.auth.Role;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;

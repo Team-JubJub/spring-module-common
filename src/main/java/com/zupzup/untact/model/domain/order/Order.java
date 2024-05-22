@@ -1,10 +1,10 @@
 package com.zupzup.untact.model.domain.order;
 
 import com.zupzup.untact.model.BaseEntity;
-import com.zupzup.untact.model.domain.enums.StoreCategory;
-import com.zupzup.untact.model.domain.order.type.OrderSpecific;
-import com.zupzup.untact.model.domain.order.type.OrderStatus;
-import com.zupzup.untact.model.dto.order.OrderDto;
+import com.zupzup.untact.model.enums.StoreCategory;
+import com.zupzup.untact.model.enums.OrderSpecific;
+import com.zupzup.untact.model.enums.OrderStatus;
+import com.zupzup.untact.dto.order.OrderDto;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;

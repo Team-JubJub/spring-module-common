@@ -1,10 +1,10 @@
 package com.zupzup.untact.model.domain.store;
 
 import com.zupzup.untact.model.BaseEntity;
-import com.zupzup.untact.model.domain.enums.EnterState;
-import com.zupzup.untact.model.domain.enums.StoreCategory;
-import com.zupzup.untact.model.dto.store.StoreDto;
-import com.zupzup.untact.model.dto.store.seller.request.ModifyStoreDto;
+import com.zupzup.untact.model.enums.EnterState;
+import com.zupzup.untact.model.enums.StoreCategory;
+import com.zupzup.untact.dto.store.StoreDto;
+import com.zupzup.untact.dto.store.seller.request.ModifyStoreDto;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
@@ -68,6 +68,9 @@ public class Store extends BaseEntity {
     private Boolean isOpen; // 가게 운영 여부
     @Column(nullable = false)
     private String closedDay; // 휴무일
+
+    @Column(length = 300)
+    private String reviewAnnouncement; // 리뷰 공지
 
     @ElementCollection
     @CollectionTable(name = "starredUsers", joinColumns = @JoinColumn(name="storeId", referencedColumnName="id"))

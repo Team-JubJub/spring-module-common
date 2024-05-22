@@ -1,8 +1,8 @@
 package com.zupzup.untact.repository;
 
 
-import com.zupzup.untact.model.domain.enums.EnterState;
-import com.zupzup.untact.model.domain.enums.StoreCategory;
+import com.zupzup.untact.model.enums.EnterState;
+import com.zupzup.untact.model.enums.StoreCategory;
 import com.zupzup.untact.model.domain.store.Store;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

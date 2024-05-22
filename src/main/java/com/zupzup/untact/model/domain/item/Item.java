@@ -2,8 +2,8 @@ package com.zupzup.untact.model.domain.item;
 
 import com.zupzup.untact.model.BaseEntity;
 import com.zupzup.untact.model.domain.store.Store;
-import com.zupzup.untact.model.dto.item.seller.request.UpdateRequestDto;
-import com.zupzup.untact.model.dto.item.seller.response.GetDtoWithStore;
+import com.zupzup.untact.dto.item.seller.request.UpdateRequestDto;
+import com.zupzup.untact.dto.item.seller.response.GetDtoWithStore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
