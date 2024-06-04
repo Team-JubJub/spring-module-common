@@ -71,6 +71,10 @@ public class Store extends BaseEntity {
 
     @Column(length = 300)
     private String reviewAnnouncement; // 리뷰 공지
+    @Column(nullable = false)
+    private int reviewCount;    // 리뷰 수
+    @Column(nullable = false)
+    private float starRate;   // 별점
 
     @ElementCollection
     @CollectionTable(name = "starredUsers", joinColumns = @JoinColumn(name="storeId", referencedColumnName="id"))
@@ -129,4 +133,16 @@ public class Store extends BaseEntity {
 
     public void updateDeviceTokens(StoreDto storeDto) { this.deviceTokens = storeDto.getDeviceTokens(); }
 
+    // 리뷰 개수 관련 method
+    public void addReviewCount() {
+        this.reviewCount++;
+    }
+
+    public void subtractReviewCount() {
+        this.reviewCount--;
+    }
+
+    public void calculateStarRate(int reviewCount, float newStarRate) {
+        this.starRate = (this.starRate * reviewCount + newStarRate) / reviewCount;
+    }
 }
