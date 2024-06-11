@@ -1,4 +1,4 @@
-# spring-module-common
+# spring-module-common
 ## 💡 목적
 어플리케이션과 웹의 공통 사용 부분 공유
 
